@@ -12,6 +12,17 @@ namespace Queue
     {
         private readonly List<T> _list;
         public int Count =>_list.Count;
+        public ArrayQueue()
+        {
+            _list = new List<T>();
+        }
+        public ArrayQueue(IEnumerable<T> collection)
+        {
+            foreach (var item in collection)
+            {
+                EnQueue(item);
+            }
+        }
 
         public T DeQueue()
         {
