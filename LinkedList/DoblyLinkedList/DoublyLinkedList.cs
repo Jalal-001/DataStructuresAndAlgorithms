@@ -43,21 +43,23 @@ namespace LinkedList.DoblyLinkedList
             if (isHeadNull)
             {
                 AddFirst(value);
-                Count++;
                 return;
             }
-            // Tail.get returned null **"Exception"**
+
             var current = Head;
             while (current.Next != null)
             {
                 current = current.Next;
-                Tail = current;
+                //Tail = current.Next;
             }
-            Tail.Next = newNode;
-            newNode.Prev = Tail;
+            current.Next = newNode;
+            newNode.Prev = current;
             Tail = newNode;
+            Tail.Prev = current;
+            current.Next = Tail;
             Count++;
             return;
+
         }
         public IEnumerator<T> GetEnumerator()
         {
@@ -135,7 +137,15 @@ namespace LinkedList.DoblyLinkedList
         {
             if (isHeadNull)
                 throw new Exception(nameof(Head));
+
             var temp = Head;
+
+            if (Count == 1)
+            {
+                Head = null;
+                Count--;
+                return temp.Value;
+            }
             Head = Head.Next;
             Head.Prev = null;
             Count--;

@@ -11,18 +11,18 @@ namespace Queue
     public class ArrayQueue<T> : IQueue<T>
     {
         private readonly List<T> _list;
-        public int Count =>_list.Count;
         public ArrayQueue()
         {
             _list = new List<T>();
         }
-        public ArrayQueue(IEnumerable<T> collection)
+        public ArrayQueue(IEnumerable<T> collection):this()
         {
             foreach (var item in collection)
             {
                 EnQueue(item);
             }
         }
+        public int Count => _list.Count;
 
         public T DeQueue()
         {
