@@ -74,7 +74,7 @@ namespace DataStructures.Array
             try
             {
                 var temp = new Object[InnerArray.Length / 2];
-                System.Array.Copy(InnerArray, temp, temp.Length / 2);
+                System.Array.Copy(InnerArray, temp, InnerArray.Length / 2);
                 InnerArray = temp;
             }
             catch (Exception ex)
@@ -84,8 +84,8 @@ namespace DataStructures.Array
         }
 
        new public IEnumerator GetEnumerator()
-        {
+       {
             return InnerArray.Take(position).GetEnumerator();
-        }
+       }
     }
 }

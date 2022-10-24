@@ -2,26 +2,16 @@
 
 namespace DataStructures.Array.Generic
 {
-    public class ArrayEnumerator<T> : IEnumerator<T>
+    public class GenericArrayEnumerator<T> : IEnumerator<T>
     {
         private T[] _array;
-        private int index;
-        private Array<int> array;
-        private int v;
-        private int position;
-
-        public ArrayEnumerator(T[] array, int position)
+        private int index = -1;
+    
+        public GenericArrayEnumerator(T[] array)
         {
             _array = array;
-            this.position = position;   
         }
-
-        public ArrayEnumerator(Array<int> array, int v)
-        {
-            this.array = array;
-            this.v = v;
-        }
-
+    
         public T Current => _array[index];
 
         object IEnumerator.Current => Current;

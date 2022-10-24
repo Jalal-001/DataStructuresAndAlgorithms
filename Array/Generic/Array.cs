@@ -37,7 +37,7 @@ namespace DataStructures.Array.Generic
         public Array(T[] ınnerArray, int position)
         {
             InnerArray = ınnerArray;
-            this.position = position;
+            this.position = position; 
         }
 
         public T GetValue(int index)
@@ -128,7 +128,7 @@ namespace DataStructures.Array.Generic
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new ArrayEnumerator<T>(InnerArray, position);
+            return new GenericArrayEnumerator<T>(InnerArray);
         }
 
         IEnumerator IEnumerable.GetEnumerator()

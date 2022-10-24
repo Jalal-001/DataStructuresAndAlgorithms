@@ -33,10 +33,11 @@ namespace QueueTest
             _arrayList.EnQueue(value);
             Assert.Equal(_arrayList.Count,4);
             Assert.Collection(_arrayList,
-                item => Assert.Equal(item, 57),
                 item => Assert.Equal(item, 10),
                 item => Assert.Equal(item, 20),
-                item => Assert.Equal(item, 30));
+                item => Assert.Equal(item, 30),
+                item => Assert.Equal(item, 57)
+                );
         }
         [Fact]
         public void Peek_Test()

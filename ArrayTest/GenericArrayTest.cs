@@ -74,9 +74,15 @@ namespace ArrayTest
         [Fact]
         public void Generic_GetEnumerator_Test()
         {
-            // Fail //
-            
-            
+            // *** Position nezere alinmayib //
+            var arr = new Array<string>("B", "D", "U");
+            string u="";
+
+            foreach (var item in arr)
+            {
+                u += item;
+            }
+            Assert.Equal("BDU",u);
         }
         [Fact]
         public void IndexOf_Test()
