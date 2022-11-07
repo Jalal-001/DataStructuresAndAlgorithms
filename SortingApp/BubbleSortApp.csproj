@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RefTypeAndValueTypeApp\RefTypeAndValueTypeApp.csproj" />
-    <ProjectReference Include="..\Stack\Stack.csproj" />
+    <ProjectReference Include="..\SortingAlgorithms\SortingAlgorithms.csproj" />
   </ItemGroup>
 
 </Project>
