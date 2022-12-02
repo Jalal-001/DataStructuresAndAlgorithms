@@ -15,7 +15,7 @@ namespace Search
             int middle = (last + first) / 2;
             if (array[middle].Equals(key))
                 return middle;
-            else if (last > first)
+            else if (first > last)
                 return -1;
             else if (key.CompareTo(array[middle]) < 1) // key<array[middle]
                 return Search(array, first, middle, key);
