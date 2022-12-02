@@ -10,7 +10,7 @@
             {
                 for (int o = 0; o < n - i - 1; o++) // n-i-1 => remove past number and continue
                 {
-                    if (array[o].CompareTo(array[o + 1]) >= 1) // [0]>[o+1]
+                    if (array[o].CompareTo(array[o + 1]) >= 1) // [o]>[o+1]
                         Sorting.Swap(array, o, o + 1);
                 }
             }

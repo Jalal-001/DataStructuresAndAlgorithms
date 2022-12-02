@@ -1,5 +1,7 @@
 ﻿using DataStructures.Array;
 
+// system array
+
 var arr = System.Array.CreateInstance(typeof(int),4);
 arr.SetValue(11, 0);
 arr.SetValue(22, 1);
@@ -21,6 +23,7 @@ foreach (var item in arr)
     Console.WriteLine(item);
 }
 
+// our array
 
 var ownArray = new DataStructures.Array.Array(1, 2, 3);
 foreach (var item in ownArray)

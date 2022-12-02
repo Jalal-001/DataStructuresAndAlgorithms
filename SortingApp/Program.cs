@@ -7,7 +7,8 @@ internal class Program
 		var array = new int[] { 10, 30, 50, 45, 60, 90, 80 };
 		Write(array);
 		SortingAlgorithms.BubbleSort.Sort(array);
-        Write(array);
+		//SortingAlgorithms.SelectionSort.Sort(array);
+		Write(array);
 
         static void Write<T>(T[] array)
 		{

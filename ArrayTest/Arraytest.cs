@@ -17,7 +17,7 @@ namespace ArrayTest
         public void Check_Array_Constructor(int defaultSize)
         {
             // Arrange |  Act
-            var array = new DataStructures.Array.Array(defaultSize);
+            var array = new Array(defaultSize);
 
             //Assert
             Assert.Equal(defaultSize, array.Length);
@@ -27,7 +27,7 @@ namespace ArrayTest
         public void Check_Array_Construcctor_WithParams()
         {
             // Arrange & Act
-            var array = new DataStructures.Array.Array(1, 2, 3, 4);
+            var array = new Array(1, 2, 3, 4);
 
             //Assert
             Assert.Equal(4, array.Length);
@@ -38,7 +38,7 @@ namespace ArrayTest
         public void Get_And_Set_Value_InArray()
         {
             // Arrange | Act
-            var array = new DataStructures.Array.Array();
+            var array = new Array();
             array.SetValue(10, 0);
             array.SetValue(20, 1);
             //array.SetValue(30, 17);
@@ -54,10 +54,10 @@ namespace ArrayTest
         public void Array_Clone_Test()
         {
             // Arrange
-            var array = new DataStructures.Array.Array(1, 2, 3);
+            var array = new Array(1, 2, 3);
 
             // Act
-            var arrayClone = array.Clone() as DataStructures.Array.Array;
+            var arrayClone = array.Clone() as Array;
 
             // Assert
             Assert.NotNull(arrayClone); // new referance
@@ -69,7 +69,7 @@ namespace ArrayTest
         public void Array_GetEnumerator_Test()
         {
             // Arrange
-            var array = new DataStructures.Array.Array(10, 20, 30);
+            var array = new Array(10, 20, 30);
 
             // Act
             string s = "";
@@ -86,7 +86,7 @@ namespace ArrayTest
         public void Array_Custom_GetEnumerator_Test()
         {
             // Arrange
-            var array =new DataStructures.Array.Array(10, 20, 30);
+            var array =new Array(10, 20, 30);
 
             // Act
             string s = "";
@@ -98,6 +98,7 @@ namespace ArrayTest
             // Assert
             Assert.Equal("102030", s);
         }
+
         [Fact]
         public void Remove_Test()
         {

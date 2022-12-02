@@ -36,6 +36,8 @@ namespace RefAndValueTypeTests
         [Fact]
         public void RecordTypeTest()
         {
+            // deyerlere gore qarsilasdirma.
+
             //Arrange
             var p1 = new RecordType(5, 12);
 

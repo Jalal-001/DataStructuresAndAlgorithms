@@ -19,7 +19,6 @@ public class ArrayCustomEnumerator:IEnumerator
             return true;
         }
         return false;
-        
     }
 
     public void Reset()
