@@ -17,7 +17,7 @@ namespace SortingAlgorithms
                 int min = i;
                 for (int j = i+1; j < n; j++)
                 {
-                    if (array[j].CompareTo(array[min])>=1)
+                    if (array[j].CompareTo(array[min])<1)
                         min = j;
                     Sorting.Swap(array, i, j);
                 }   

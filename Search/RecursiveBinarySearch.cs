@@ -8,6 +8,7 @@ namespace Search
 {
     public class RecursiveBinarySearch
     {
+        // Recursive
         // generic 
         public static int Search<T>(T[] array, int first, int last, T key)
             where T : IComparable

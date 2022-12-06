@@ -2,6 +2,7 @@
 {
     public class BinarySearch
     {
+        // Iterative
         public static int Search<T>(T[] input, T key)
             where T : IComparable<T>
         {
